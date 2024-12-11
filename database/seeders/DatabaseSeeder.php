@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
                 "name"=>"Mudir",
             ],
             [
-                "name"=>"Hodim",
+                "name"=>"Xodim",
             ],
             [
                 "name"=>"Talaba",

@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('book_items', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->foreign('book_id');
-            $table->string('state')->default('new');
-            $table->boolean('status')->default(1);
-            $table->string('description')->nullable();
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('book_items');
+        Schema::dropIfExists('categories');
     }
 };
